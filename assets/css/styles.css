@@ -575,7 +575,7 @@ form textarea.form-control {
 }
 .login_success{
 
-  margin-top: 70px;
+  margin-top: 3px;
   color: #4F8A10;
   background-color: #DFF2BF;
   background-image:url('assets/img/error_imgs/success.png');
@@ -609,6 +609,25 @@ form textarea.form-control {
   color: #D63301;
   background-color: #FFCCBA;
   background-image: url('assets/img/error_imgs/warning.png');
+}
+/*profile dropdown styles starts here*/
+.dropdown-menu{
+
+  background-color: #D6E9E9;
+  margin-right: -150px;
+  opacity: 0.9;
+}
+.dropdown-toggle{
+
+  margin-right: 80px;
+}
+
+
+
+/*ends here*/
+.welcome_option{
+
+  font-style: normal;
 }
 
 @media screen and (max-width: 640px) {
