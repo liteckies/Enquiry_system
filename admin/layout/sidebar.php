@@ -9,7 +9,7 @@
   <!-- Bootstrap 3.3.5 -->
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="bootstrap/css/font-awesome.min.css">
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="bootstrap/css/ionicons.min.css">
   <!-- Theme style -->
@@ -328,56 +328,41 @@
             <i class="fa fa-dashboard"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
           </a>
         </li>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-files-o"></i>
-            <span>My Account</span>
-            <span class="label label-primary pull-right">4</span>
+        <li>
+          <a href="myaccount.php">
+            <i class="fa fa-user"></i> <span>My Account</span>
           </a>
-          <ul class="treeview-menu">
-            <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
-            <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Boxed</a></li>
-            <li><a href="pages/layout/fixed.html"><i class="fa fa-circle-o"></i> Fixed</a></li>
-            <li><a href="pages/layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
-          </ul>
         </li>
          <li>
-          <a href="pages/widgets.html">
-            <i class="fa fa-th"></i> <span>Notice Board</span>
-            <small class="label pull-right bg-green">new</small>
+          <a href="noticeboard.php">
+            <i class="fa fa-bars"></i> <span>Notice Board</span>
           </a>
         </li>
         <li>
-          <a href="pages/widgets.html">
-            <i class="fa fa-th"></i> <span>News</span>
-            <small class="label pull-right bg-green">new</small>
+          <a href="news.php">
+            <i class="fa fa-newspaper-o"></i> <span>News</span>
           </a>
         </li>
         <li class="treeview">
-          <a href="#">
-            <i class="fa fa-pie-chart"></i>
+          <a href="">
+            <i class="fa fa-cogs"></i>
             <span>Engineering Courses</span>
             <i class="fa fa-angle-left pull-right"></i>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i>Certificate</a></li>
-            <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i>Diploma</a></li>
-            <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i> Degree</a></li>
-            <li><a href="pages/charts/inline.html"><i class="fa fa-circle-o"></i>All</a></li>
+            <li><a href="certificate.php"><i class="fa fa-circle-o"></i>Certificate</a></li>
+            <li><a href="diploma.php"><i class="fa fa-circle-o"></i>Diploma</a></li>
+            <li><a href="degree.php"><i class="fa fa-circle-o"></i> Degree</a></li>
+            <li><a href="all_courses.php"><i class="fa fa-circle-o"></i>All</a></li>
           </ul>
         </li>
          <li class="treeview">
-          <a href="#">
-            <i class="fa fa-pie-chart"></i>
+          <a href="messages.php">
+            <i class="fa fa-envelope-o"></i>
             <span>Messages</span>
-            <i class="fa fa-angle-left pull-right"></i>
           </a>
-          <ul class="treeview-menu">
-            <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i>All</a></li>
-            <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i>Read</a></li>
-            <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i> Unread</a></li>
-          </ul>
         </li>
       </section>
     <!-- /.sidebar -->
   </aside>
+  
