@@ -194,6 +194,7 @@ a:focus {
   position: relative;
   max-height: 100px;
   z-index: 1030;
+  background-color: red;
 }
 .main-header > .navbar {
   -webkit-transition: margin-left 0.3s ease-in-out;
@@ -308,6 +309,7 @@ a:focus {
 }
 .main-header .navbar-brand {
   color: #fff;
+  background-color: red;
 }
 .content-header {
   position: relative;

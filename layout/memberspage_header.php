@@ -32,7 +32,7 @@
                   <div class=" navbar-right navigation span 8">
                    <!-- user login dropdown start-->
                     <li class="dropdown">
-                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="">
                             <span class="profile-ava">
                                 <!--avatar goes here-->
                             </span>
