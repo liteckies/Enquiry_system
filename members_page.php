@@ -1,4 +1,7 @@
 <?php
+   include('session.php');
+ ?>
+<?php
   require('layout/sidebar.php')
 ?>
 

@@ -23,5 +23,5 @@
   <!-- /.content-wrapper -->
   
 <?php
-  require('layout/footer.php')
+  require('layout/members_pagefooter.php')
 ?>
