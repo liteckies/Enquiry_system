@@ -13,8 +13,10 @@
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="bootstrap/css/ionicons.min.css">
+  <!-- custom style -->
+  
   <!-- Theme style -->
-  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="dist/css/AdminLTE.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
@@ -72,7 +74,6 @@
                   <li><!-- start message -->
                     <a href="#">
                       <div class="pull-left">
-                        <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                       </div>
                       <h4>
                         Support Team
@@ -85,7 +86,7 @@
                   <li>
                     <a href="#">
                       <div class="pull-left">
-                        <img src="dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                        <img src="assets/img/eco/user8-128x128.jpg" class="img-circle" alt="User Image">
                       </div>
                       <h4>
                         AdminLTE Design Team
@@ -254,13 +255,13 @@
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="dist/img/avatar.png" class="user-image" alt="User Image">
+              <img src="assets/img/eco/user8-128x128.jpg" class="user-image" alt="User Image">
               <span class="hidden-xs"></span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="dist/img/avatar.png" class="img-circle" alt="User Image">
+                <img src="assets/img/eco/user8-128x128.jpg" class="img-circle" alt="User Image">
               <li class="user-body">
               </li>
               <!-- Menu Footer-->
@@ -285,7 +286,7 @@
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="dist/img/avatar.png" class="img-circle" alt="User Image">
+          <img src="assets/img/eco/user8-128x128.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
           <p id="welcome" class="welcome_option" >Welcome ,   <i><?php echo $login_session; ?></i></p>
@@ -348,4 +349,5 @@
       </section>
     <!-- /.sidebar -->
   </aside>
+
   

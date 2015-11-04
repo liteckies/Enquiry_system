@@ -14,6 +14,13 @@ html,
 body {
   min-height: 100%;
 }
+.quick-mail{
+
+  width: 900px;
+  margin-left:120px;
+  margin-top: 30px;
+  height: 80px;
+}
 .layout-boxed html,
 .layout-boxed body {
   height: 100%;
