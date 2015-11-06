@@ -18,9 +18,23 @@ body {
 .layout-boxed body {
   height: 100%;
 }
-.col-md-9{
-    width: 800px;
+/* custom styles */
+.insert-course{
+    width: 850px;
+    margin: 50px 0 0 100px;
+    background-color: #f5f5f5;
+    padding:10px 15px 6px 3px;
+    box-shadow: 0px 0px 9px #D0D0D0;
+      }
+      .form-group select {
+
+        width:80%;
+        margin-left: 157px;
+      }
+.btn .btn-danger{
+  background-color: green;
 }
+/* /custom styles */
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

@@ -14,7 +14,7 @@
   <!-- Ionicons -->
   <link rel="stylesheet" href="bootstrap/css/ionicons.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="dist/css/AdminLTE.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
@@ -350,7 +350,8 @@
             <li><a href="certificate.php"><i class="fa fa-circle-o"></i>Certificate</a></li>
             <li><a href="diploma.php"><i class="fa fa-circle-o"></i>Diploma</a></li>
             <li><a href="degree.php"><i class="fa fa-circle-o"></i> Degree</a></li>
-            <li><a href="all_courses.php"><i class="fa fa-circle-o"></i>All</a></li>
+            <li><a href="others.php"><i class="fa fa-circle-o"></i> Others</a></li>
+            <li><a href="addcourse.php"><i class="fa fa-circle-o"></i>Add course</a></li>
           </ul>
         </li>
          <li class="treeview">
