@@ -9,12 +9,13 @@
   <link rel="shortcut icon" href="assets/img/eco/tumfavicon.png">
   <!-- Bootstrap 3.3.5 -->
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+   <!-- data-tables -->
+   <link rel="stylesheet" type="text/css" href="assets/css/jquery.dataTables.min.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="bootstrap/css/ionicons.min.css">
   <!-- custom style -->
-  
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/AdminLTE.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -267,10 +268,10 @@
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">Profile</a>
+                  <a href="#" class="btn btn-default btn-flat"><i class="fa fa-fw fa-user"></i> Profile</a>
                 </div>
-                <div class="pull-right">
-                  <a href="logout.php" class="btn btn-default btn-flat">Sign out</a>
+                <div class="pull-right"> 
+                  <a href="logout.php" class="btn btn-default btn-flat"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
                 </div>
               </li>
             </ul>
@@ -289,7 +290,7 @@
           <img src="assets/img/eco/user8-128x128.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p id="welcome" class="welcome_option" >Welcome ,   <i><?php echo $login_session; ?></i></p>
+          <p id="welcome" class="welcome_option" >Welcome , <i><?php echo $login_session; ?></i></p>
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
@@ -343,7 +344,7 @@
          <li class="treeview">
           <a href="messages.php">
             <i class="fa fa-envelope-o"></i>
-            <span>Messages</span>
+            <span>Enquiry</span>
           </a>
         </li>
       </section>

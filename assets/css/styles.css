@@ -563,17 +563,7 @@ form textarea.form-control {
                 list-style: none;
             }
   /*error reporting styles starts here*/
-  .success_message, .warning_message, .login_success, {
-  border: 1px solid;
-  margin: 0 auto;
-  padding:10px 5px 10px 50px;
-  background-repeat: no-repeat;
-  background-position: 10px center;
-     font-weight:bold;
-     width:450px;
-     
-}
-.login_success{
+  .login_success{
 
   margin-top: 3px;
   color: #4F8A10;
@@ -581,19 +571,22 @@ form textarea.form-control {
   background-image:url('assets/img/error_imgs/success.png');
 }
 .success_message {
-  margin-top: 50px;
-   padding:10px;
-  color: #4F8A10;
+  width:500px;
+  margin: 60px auto;
+  color:#4F8A1A;
   background-color: #DFF2BF;
-  background-image:url('assets/imgs/success.png');
-}
+  padding:5px;
+  border:2px solid #4F8A10;
+  }
 .warning_message{
-  margin-top: 60px;
-  color: #9F6000;
-  background-color: #FEEFB3;
-  background-image: url('assets/img/error_imgs/warning.png');
+  width:500px;
+  margin: 60px auto;
+  color: #E0000C;
+  background-color: #FFBABA;
+  padding:5px;
+  border:2px solid #D8000C;
 }
-.error_message{
+.error_message{ox
  
   color: #D8000C;
   margin-top:-11px;

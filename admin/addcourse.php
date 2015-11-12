@@ -7,7 +7,7 @@
  $name = $_POST['name'];
  $department = $_POST['department'];
  $category = $_POST['category'];
-  $description = $_POST['description'];
+ $description = $_POST['description'];
  // variables for input data
 @$db = mysql_pconnect("localhost", "root", "root");
           //checking connecting
@@ -28,7 +28,11 @@
  // sql query execution function
  if(mysql_query($sql_query))
  {
- echo "Course succesifully inserted.";
+  ?>
+ <script type="text/javascript">
+  alert('Course inserted successifully');
+  </script>
+  <?php
  }
  else
  {
@@ -62,28 +66,28 @@
                         <label for="inputName" class="col-sm-2 control-label">Course Name</label>
 
                         <div class="col-sm-10">
-                          <input type="text" class="form-control" name="name" placeholder="Course name here">
+                          <input type="text" class="form-control" name="name" placeholder="Course name here" required>
                         </div>
                       </div>
                        <div class="form-group">
                         <label for="inputName" class="col-sm-2 control-label">Department</label>
 
                         <div class="col-sm-10">
-                          <input type="text" class="form-control" name="department" placeholder="Department">
+                          <input type="text" class="form-control" name="department" placeholder="Department" required>
                         </div>
                       </div>
                       <div class="form-group">
                         <label for="inputName" class="col-sm-2 control-label">Category</label>
 
                         <div class="col-sm-10">
-                          <input type="text" class="form-control" name="category" placeholder="Choose category">
+                          <input type="text" class="form-control" name="category" placeholder="Choose category" required>
                         </div>
                       </div>
                       <div class="form-group">
                         <label for="inputExperience" class="col-sm-2 control-label">Description</label>
 
                         <div class="col-sm-10">
-                          <textarea class="form-control" name="description" placeholder="Course Description"></textarea>
+                          <textarea class="form-control" name="description" placeholder="Course Description" required></textarea>
                         </div>
                       </div>
                       <div class="form-group">

@@ -10,6 +10,8 @@
 <script>
   $.widget.bridge('uibutton', $.ui.button);
 </script>
+<!--data-tables -->
+<script type="text/javascript" src="assets/js/jquery.dataTables.min.js"></script>
 <!-- Bootstrap 3.3.5 -->
 <script src="bootstrap/js/bootstrap.min.js"></script>
 <!-- Morris.js charts -->

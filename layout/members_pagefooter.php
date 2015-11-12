@@ -14,6 +14,8 @@
 <script src="bootstrap/js/bootstrap.min.js"></script>
 <!-- Morris.js charts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+<!--data-tables -->
+<script type="text/javascript" src="assets/js/jquery.dataTables.min.js"></script>
 <script src="plugins/morris/morris.min.js"></script>
 <!-- Sparkline -->
 <script src="plugins/sparkline/jquery.sparkline.min.js"></script>

@@ -8,15 +8,16 @@
     <section class="content-header">
       <h1>
         Dashboard
-        <small>Add extra course</small>
+        <small>System users</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">all courses</li>
+        <li class="active">users</li>
       </ol>
     </section>
      <!-- Main content --> 
-     <?php
+    <!-- Main content --> 
+      <?php
      @$db = mysql_pconnect("localhost", "root", "root");
           //checking connecting
         if (!$db)
@@ -30,18 +31,17 @@
                 echo "Cannot select database.";
               }
      // set the query
-        $result = mysql_query("SELECT * FROM courses");
+        $result = mysql_query("SELECT * FROM members");
         ?>
         <div class="courses_outer">
              <div class="course_table">
                     <table id="example" class="table table-striped table-bordered display">
                         <thead class="table_header">
                           <tr>
-                            <th>#id</th>
-                            <th>Name</th>
-                            <th>Department</th>
-                            <th>Category</th>
-                            <th>Description </th>
+                            <th>id</th>
+                            <th>Username</th>
+                            <th>Email</th>
+                            <th>Password</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -50,10 +50,9 @@
                               echo
                               "<tr>
                                 <td>{$row['id']}</td>
-                                <td>{$row['name']}</td>
-                                <td>{$row['department']}</td>
-                                <td>{$row['category']}</td>
-                                <td>{$row['description']}</td>
+                                <td>{$row['username']}</td>
+                                <td>{$row['email']}</td>
+                                <td>{$row['password']}</td>
                               </tr>";
                             }
                           ?>
@@ -61,14 +60,12 @@
                     </table>
                  </div>
                <!-- /.content -->
-        </div>
-   </div>
+        </div> 
+
+      <!-- /.content -->
+  </div>
   <!-- /.content-wrapper -->
-  <script>
-     $(document).ready(function() {
-    $('#example').DataTable();
-      } );
-  </script>
+  
 <?php
-  require('layout/members_pagefooter.php')
+  require('layout/footer.php')
 ?>

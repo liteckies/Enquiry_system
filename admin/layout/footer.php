@@ -1,7 +1,7 @@
 <footer class="main-footer">
     <strong>Copyright &copy; 2015 Enquiry tracking and management</a>.</strong> All rights
     reserved.
-  </footer> -->
+  </footer>
 <!-- jQuery 2.1.4 -->
 <script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
@@ -35,7 +35,6 @@
 <script src="plugins/fastclick/fastclick.js"></script>
 <!-- AdminLTE App -->
 <script src="dist/js/app.min.js"></script>
-->
 </body>
 </html>
 

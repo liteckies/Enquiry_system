@@ -9,6 +9,8 @@
   <link rel="shortcut icon" href="assets/img/eco/tumfavicon.png">
   <!-- Bootstrap 3.3.5 -->
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <!-- data-tables -->
+  <link rel="stylesheet" type="text/css" href="assets/css/jquery.dataTables.min.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
   <!-- Ionicons -->
@@ -330,6 +332,11 @@
             <i class="fa fa-user"></i> <span>My Account</span>
           </a>
         </li>
+        <li>
+          <a href="users.php">
+            <i class="fa fa-users"></i> <span>users</span>
+          </a>
+        </li>
          <li>
           <a href="noticeboard.php">
             <i class="fa fa-bars"></i> <span>Notice Board</span>
@@ -357,7 +364,7 @@
          <li class="treeview">
           <a href="messages.php">
             <i class="fa fa-envelope-o"></i>
-            <span>Messages</span>
+            <span>Enquiries</span>
           </a>
         </li>
       </section>

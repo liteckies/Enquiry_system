@@ -1,5 +1,7 @@
 <?php
-     require('layout/registration_header.php'); 
+     require('layout/registration_header.php');
+     ?>
+     <?php
      if(@$_POST['submit'])
             {
           $username = $_POST['username'];
