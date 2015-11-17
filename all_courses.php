@@ -64,11 +64,7 @@
         </div>
    </div>
   <!-- /.content-wrapper -->
-  <script>
-     $(document).ready(function() {
-    $('#example').DataTable();
-      } );
-  </script>
+  
 <?php
   require('layout/members_pagefooter.php')
 ?>

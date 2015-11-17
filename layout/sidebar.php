@@ -318,11 +318,6 @@
             <i class="fa fa-user"></i> <span>My Account</span>
           </a>
         </li>
-         <li>
-          <a href="noticeboard.php">
-            <i class="fa fa-bars"></i> <span>Notice Board</span>
-          </a>
-        </li>
         <li>
           <a href="news.php">
             <i class="fa fa-newspaper-o"></i> <span>News</span>

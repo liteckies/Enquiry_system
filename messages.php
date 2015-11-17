@@ -1,18 +1,16 @@
 <?php
   require('layout/sidebar.php');
-  ?>
-  <?php
-  if(@$_POST['submit'])
-            {
-          $email= $_POST['email'];
-          $phone= $_POST['phone'];
-          $subject= $_POST['subject'];
-          $enquiry = $_POST['enquiry'];
-          $email=addslashes($email);
-          $phone=addslashes($phone);
-          $subject=addslashes($subject);
-          $enquiry= addslashes($enquiry);
-          @$db = mysql_pconnect("localhost", "root", "root");
+  if(isset($_POST['submit']))
+{
+ // variables for input data
+    $email=$_POST['email'];
+    $phone=$_POST['phone'];
+    $subject=$_POST['subject'];
+    $enquiry=$_POST['enquiry'];
+    $monthh = strtotime('now');
+    $mon = date('Y-m-d-l',$monthh);
+ // variables for input data
+@$db = mysql_pconnect("localhost", "root", "root");
           //checking connecting
               if (!$db)
                       {
@@ -24,23 +22,32 @@
                       {
                         echo "Cannot select database.";
                       }
-                        //quering the selected database
-                     $rs=mysql_query("select * from enquiries where sender='$email'");
-                          if (mysql_num_rows($rs)>0)
-                              { 
-                                  echo '<br><div class="warning_message"> <span class="fa fa-warning"</span> Error!  '.$email.' Already Exists, <a href="register.php"> Choose a different username.</a></div>';
-                                  exit;
-                              }
-                              else{
-                             $query="insert into enquiries(sender, phone, subject, body, status) values('$email','$phone','$subject','$enquiry','unread')";
-                              $rs=mysql_query($query)or die("Could Not Perform the Query");
-                                  echo '<br><br><br><div class="success_message" ><span class="fa fa-success"</span>
-                                   Hi '.$email.' You have succesifully been signed up, please <a href="login.php">login</a>
-                                  </div>';
-                                }
-                      }
+ // sql query for inserting data into database
+ $sql_query = "INSERT INTO enquiries(sender,phone,subject,body,date_send,status) VALUES('$email','$phone','$subject','$enquiry','$mon','unread')";
+ // sql query for inserting data into database
+ 
+ // sql query execution function
+ if(mysql_query($sql_query))
+ {
   ?>
-  
+ <script type="text/javascript">
+  alert('Enquiry placed successifully, it will be responded within 24hrs');
+  window.location = "messages.php";
+  </script>
+  <?php
+ }
+ else
+ {
+  ?>
+  <script type="text/javascript">
+  alert('error occured while inserting your data');
+  </script>
+  <?php
+ }
+ // sql query execution function
+}
+  ?>
+  <!-- Content Wrapper. Contains page content -->
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->

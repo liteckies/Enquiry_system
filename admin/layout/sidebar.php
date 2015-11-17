@@ -45,11 +45,11 @@
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="index2.html" class="logo">
+    <a href="" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>A</b>dmin</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Admin </b>eCourse</span>
+      <span class="logo-lg"><b>Admin </b>Ecourse</span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top" role="navigation">
@@ -63,11 +63,21 @@
           <!-- Messages: style can be found in dropdown.less-->
           <li class="dropdown messages-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="fa fa-envelope-o"></i>
-              <span class="label label-success">4</span>
+              <i class="fa fa-envelope-o" title="messages to read"></i>
+              <span class="label label-success"><?php
+
+                  $link = mysql_connect("localhost", "root", "root");
+                  mysql_select_db("TUMENQUIRY-DB", $link);
+
+                  $result = mysql_query("SELECT * FROM enquiries", $link);
+                  $num_rows = mysql_num_rows($result);
+
+                  echo "$num_rows";
+
+                  ?></span>
             </a>
             <ul class="dropdown-menu">
-              <li class="header">You have 4 messages</li>
+              <li class="header">You have <?php  echo "$num_rows"; ?> messages</li>
               <li>
                 <!-- inner menu: contains the actual data -->
                 <ul class="menu">
@@ -295,7 +305,7 @@
     </nav>
   </header>
   <!-- Left side column. contains the logo and sidebar -->
-  <aside class="main-sidebar">
+  <aside class=" col-md-2 main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
       <!-- Sidebar user panel -->
@@ -323,7 +333,7 @@
       <ul class="sidebar-menu">
         <li class="header">MAIN NAVIGATION</li>
         <li class="treeview">
-          <a href="index.php">
+          <a href="members_page.php">
             <i class="fa fa-dashboard"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
           </a>
         </li>

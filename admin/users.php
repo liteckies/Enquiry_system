@@ -17,6 +17,7 @@
     </section>
      <!-- Main content --> 
     <!-- Main content --> 
+    <div class="all-users col-md-10">
       <?php
      @$db = mysql_pconnect("localhost", "root", "root");
           //checking connecting
@@ -41,7 +42,6 @@
                             <th>id</th>
                             <th>Username</th>
                             <th>Email</th>
-                            <th>Password</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -52,7 +52,6 @@
                                 <td>{$row['id']}</td>
                                 <td>{$row['username']}</td>
                                 <td>{$row['email']}</td>
-                                <td>{$row['password']}</td>
                               </tr>";
                             }
                           ?>
@@ -61,7 +60,7 @@
                  </div>
                <!-- /.content -->
         </div> 
-
+   </div>
       <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->

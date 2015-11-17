@@ -30,28 +30,7 @@ body {
  box-shadow: none;
 
 }
-.w{
-  margin-left: 100px;
-  width:0px;
-}
-.course_table{
-  margin: 30px auto;
-background-color:#ffffff;
-width:1100px;
-padding-left:10px;
-border-bottom:5px solid #2C3B41;
-box-shadow:1px 1px 1px rgba(0, 0, 0, 0.06) inset,;
-}
- thead tr{
-font-weight: bold;
-font-size: 15px;
-text-align: left;
-font-family: Arial, Helvetica, sans-serif;
-color:#f5f5f5;
-padding:10px;
-background-color: #2C3B41;
-}
-.courses
+
 /*  ... /ends here*/
 
 .layout-boxed html,
