@@ -15,7 +15,7 @@
                             data-speed="500"
                             data-start="700"
                             data-easing="Power4.easeOut">
-                            <img src="assets/img/eco/Slides/hand-eco.png" alt="">
+                            <img src="assets/img/eco/Slides/hand-eco.png" alt="" class="resize-phone">
                         </div>
 
                         <div class="tp-caption lfl fadeout visible-xs"
@@ -26,7 +26,7 @@
                             data-speed="500"
                             data-start="700"
                             data-easing="Power4.easeOut">
-                            <img src="assets/img/eco/iphone-eco.png" alt="">
+                            <img src="assets/img/eco/Slides/hand-eco.png" alt="" class="resize-phone">
                         </div>
 
                         <div class="tp-caption large_white_bold sft" data-x="550" data-y="center" data-hoffset="0" data-voffset="-80" data-speed="500" data-start="1200" data-easing="Power4.easeOut">
@@ -77,7 +77,7 @@
                         <img src="assets/img/transparent.png"  alt="slidebg1"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
                         <!-- LAYERS -->
                         <!-- LAYER NR. 1 -->
-                        <div class="tp-caption customin customout hidden-xs"
+                        <div class="tp-caption customin customout hidden-xs "
                             data-x="right"
                             data-y="center"
                             data-hoffset="0"
@@ -87,7 +87,7 @@
                             data-speed="1000"
                             data-start="700"
                             data-easing="Power4.easeOut">
-                            <img src="assets/img/eco/Slides/family-eco.png" alt="">
+                            <img src="assets/img/eco/Slides/family-eco.png"  alt="" class="resize">
                         </div>
 
                         <div class="tp-caption customin customout visible-xs"
@@ -100,7 +100,7 @@
                             data-speed="1000"
                             data-start="700"
                             data-easing="Power4.easeOut">
-                            <img src="assets/img/eco/Slides/family-eco.png" alt="">
+                            <img src="assets/img/eco/Slides/family-eco.png"  alt="" class="resize">
                         </div>
 
                         <div class="tp-caption lfb visible-xs" data-x="center" data-y="center" data-hoffset="0" data-voffset="400" data-speed="1000" data-start="1200" data-easing="Power4.easeOut">
@@ -112,7 +112,7 @@
                            Study at Tum
                         </div>
                         <div class="tp-caption mediumlarge_light_white sft hidden-xs" data-x="left" data-y="center" data-hoffset="0" data-voffset="0" data-speed="1000" data-start="1200" data-easing="Power4.easeOut">
-                           Create Network with like minded people
+                           Network with like minded people
                         </div>
                         <div class="tp-caption small_light_white sfb hidden-xs" data-x="left" data-y="center" data-hoffset="0" data-voffset="80" data-speed="1000" data-start="1600" data-easing="Power4.easeOut">
                            <p>Nulla pretium libero interdum, tempus lorem non, rutrum diam. <br> Quisque pellentesque diam sed pulvinar lobortis. Vestibulum ante <br>ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>

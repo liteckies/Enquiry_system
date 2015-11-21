@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
    <meta charset="utf-8">
-    <title>Course enquiry system</title>
+    <title>Welcome | Ecourse</title>
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <link rel="shortcut icon" href="assets/img/eco/tumfavicon.png">
@@ -43,7 +43,7 @@
                             <span class="fa fa-bars fa-lg"></span>
                         </button>
                         <a class="navbar-brand" href="index.php">
-                            <img src="assets/img/eco/logotum.png" alt="" class="logo">
+                            <img src="assets/img/eco/logotum.png" alt="" class="logo-home">
                         </a>
                     </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -52,7 +52,7 @@
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="register.php">signup</a>
                             </li>
-                            <li><a class="getApp" href="login.php">Login</a>
+                            <li><a class="getApp" href="login.php">login</a>
                             </li>
                         </ul>
                     </div>

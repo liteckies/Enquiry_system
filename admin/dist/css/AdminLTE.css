@@ -22,6 +22,7 @@ body {
 .tab-pane{
   width: 100%;
 }
+
 .insert-course{
     width: 850px;
     margin: 50px 0 0 100px;
@@ -37,6 +38,30 @@ body {
 .btn .btn-danger{
   background-color: green;
 }
+.admin-main{
+  margin-left: 17px;
+  margin-top: 15px;
+}
+/*users table in users page in admin panel*/
+.all-users{
+  background-color: #ffffff;
+  padding:1px;
+  margin:15px 0px 0px 20px;
+  box-shadow: 0px 0px 9px #D0D0D0;
+}
+.all-courses{
+  background-color: #f1f1f1;
+  width: 96%;
+  margin:15px 0px 0px 20px;
+  box-shadow: 0px 0px 9px #D0D0D0;
+
+}
+
+.content-header h1 small{
+  color:#00A65A;
+}
+
+/* end of user styles */
 /* /custom styles */
 body {
   -webkit-font-smoothing: antialiased;

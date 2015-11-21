@@ -7,9 +7,14 @@
           $username = $_POST['username'];
           $email = $_POST['email'];
           $password = $_POST['password'];
+          $passwordConfirm=$_POST['password_again'];
           $username=addslashes($username);
           $email =addslashes($email);
           $password= addslashes($password);
+          if($_POST['password'] != $_POST['passwordConfirm']){
+              $error = 'Passwords do not match.';
+               }
+
           @$db = mysql_pconnect("localhost", "root", "root");
           //checking connecting
               if (!$db)
@@ -75,6 +80,7 @@
                                   <div class="input-group">
                                        <span class="input-group-addon"><span class="fa fa-eye"></span></span>
                                       <input type="password" name="password_again" placeholder="******"  class="form-control" data-required="true" data-trigger="change"/>
+                                      <span><?php echo $error; ?></span>
                                   </div>
                             </div>
                               <div class="action_btn">
