@@ -85,6 +85,28 @@
                 </div>
               </div>
               <!-- ./col -->
+              <div class="col-lg-3 col-xs-6">
+                <!-- small box -->
+                <div class="small-box bg-red">
+                  <div class="inner">
+                    <h3><?php
+                        $link = mysql_connect("localhost", "root", "root");
+                        mysql_select_db("TUMENQUIRY-DB", $link);
+
+                        $result = mysql_query("SELECT * FROM enquiries", $link);
+                        $num_rows = mysql_num_rows($result);
+
+                        echo "$num_rows";?></h3>
+
+                    <p>Enquiries</p>
+                  </div>
+                  <div class="icon">
+                    <i class="fa fa-home"></i>
+                  </div>
+                  <a href="messages.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+              </div>
+              <!-- ./col -->
             </div>
     </div>
      

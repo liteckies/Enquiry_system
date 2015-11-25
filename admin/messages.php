@@ -49,7 +49,7 @@
                           <thead class="table_header">
                             <tr>
                               <th>Sender</th>
-                              <th>Email</th>
+                              <th>Phone</th>
                               <th>Subject</th>
                               <th>Enquiry</th>
                               <th>Date Send</th>
@@ -104,7 +104,7 @@
                           <thead class="table_header">
                             <tr>
                               <th>Sender</th>
-                              <th>Email</th>
+                              <th>Phone</th>
                               <th>Subject</th>
                               <th>Enquiry</th>
                               <th>Date Send</th>

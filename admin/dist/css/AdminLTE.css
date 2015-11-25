@@ -41,6 +41,7 @@ body {
 .admin-main{
   margin-left: 17px;
   margin-top: 15px;
+  margin-right: 15px;
 }
 /*users table in users page in admin panel*/
 .all-users{

@@ -474,7 +474,7 @@ time, mark, audio, video {
   position:absolute;
   left:50%;
   top:50%;
-  margin:-130px 0 0 -166px;
+  margin:-110px 0 0 -166px;
 }
 .boxBody
 {
@@ -488,7 +488,7 @@ time, mark, audio, video {
 {
     background:#eff4f6;
     border-top:1px solid #fff;
-    padding:22px 26px;
+    padding:39px 26px;
     overflow:hidden;
   height:32px;
 }
@@ -500,7 +500,7 @@ time, mark, audio, video {
 }
 .box footer label{
   float:left;
-  margin:4px 0 0;
+  margin:-12px 0 0 0;
 }
 .box footer input[type=checkbox]{
   vertical-align:sub;
@@ -575,6 +575,7 @@ time, mark, audio, video {
     margin-left:12px;
     float:right;
   padding:7px 21px;
+  margin-top:-17px;
 }
 
 .btnLogin:hover,
@@ -593,6 +594,7 @@ time, mark, audio, video {
 .user-login{
   margin-top: 170px;
 }
+
 
 /*   ends here */
 
@@ -686,7 +688,10 @@ time, mark, audio, video {
     width: 500px;
     height: 560px;
   }
-
+.resize-signup{
+width: 950px;
+height: 350px;  
+}
   /* -----/> end */
   /*error reporting styles starts here*/
   .login_success{
@@ -712,22 +717,20 @@ time, mark, audio, video {
   padding:5px;
   border:2px solid #D8000C;
 }
-.error_message{ox
- 
-  color: #D8000C;
-  margin-top:-11px;
-  background-image: url('assets/img/error_imgs/error.png');
   
 }
 .error_message span{
   color:green;
-  margin-bottom: 40px;
+
 }
-.validation {
- 
-  color: #D63301;
-  background-color: #FFCCBA;
-  background-image: url('assets/img/error_imgs/warning.png');
+.login-warning {
+  width:370px;
+  margin-left: 480px;
+  color: red;
+  margin-top: -79px;
+  background-color:#ffffff;
+  padding:15px;
+  border-left:6px solid #D8000C;
 }
 /*profile dropdown styles starts here*/
 .dropdown-menu{

@@ -22,7 +22,7 @@ if ($rows == 1) {
 $_SESSION['login_user']=$username; // Initializing Session
 header("location: "); // Redirecting To Other Page
 } else {
-$error = "Username or Pword is invalid";
+$error = ' <div class="login-warning"> Username and/or password is/are invalid </div>';
 }
 mysql_close($connection); // Closing Connection
 }

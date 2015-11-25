@@ -60,7 +60,7 @@
                             data-speed="1000"
                             data-start="700"
                             data-easing="Power4.easeOut">
-                            <img src="assets/img/eco/Slides/eco-slide2.png" alt="">
+                            <img src="assets/img/eco/Slides/eco-slide2.png" alt="" class="resize-signup">
                         </div>
 
                         
@@ -115,7 +115,7 @@
                            Network with like minded people
                         </div>
                         <div class="tp-caption small_light_white sfb hidden-xs" data-x="left" data-y="center" data-hoffset="0" data-voffset="80" data-speed="1000" data-start="1600" data-easing="Power4.easeOut">
-                           <p>Nulla pretium libero interdum, tempus lorem non, rutrum diam. <br> Quisque pellentesque diam sed pulvinar lobortis. Vestibulum ante <br>ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
+                           <p>You send the enquiry, we respond by advicing,  <br>You choose the best career path in a condusive learning environment.</p>
                         </div>
 
                         <div class="tp-caption lfl hidden-xs" data-x="left" data-y="center" data-hoffset="0" data-voffset="160" data-speed="1000" data-start="1800" data-easing="Power4.easeOut">

@@ -46,9 +46,7 @@
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="members_page.php" class="logo">
-      <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>U</b>ser</span>
+    <a href="members_page.php" class="logo"></span>
       <!-- logo for regular state and mobile devices -->
       <span class="logo-lg"><b>User </b>Ecourse</span>
     </a>

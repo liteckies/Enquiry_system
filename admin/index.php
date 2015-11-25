@@ -25,10 +25,18 @@
             <div class="box login">
                 <form action="login.php" method="POST">
                     <fieldset class="boxBody">
-                        <label>Username</label>
-                        <input type="text" name="username" tabindex="1" placeholder="admin username" required>
-                        <label><a href="#" class="rLink" tabindex="5">Forget your password?</a>Password</label>
-                        <input type="password" name="password" tabindex="2" required>
+                       <div class="form-group">
+                            <label>Username</label>
+                            <div class="input-group">
+                               <input type="text" name="username" tabindex="1" placeholder="admin username" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label><a href="#" class="rLink" tabindex="5">Forget your password?</a>Password</label>
+                            <div class="input-group">
+                               <input type="password" name="password" tabindex="2" required>
+                            </div>
+                        </div>
                     </fieldset>
                     <footer>
                         <label><input type="checkbox" tabindex="3">Keep me logged in</label>
