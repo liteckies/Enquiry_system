@@ -1,5 +1,5 @@
 <?php
-  require('layout/sidebar.php')
+  include('layout/sidebar.php')
 ?>
 
   <!-- Content Wrapper. Contains page content -->

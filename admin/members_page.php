@@ -22,13 +22,14 @@
               <div class="small-box bg-aqua">
                 <div class="inner">
                   <h3><?php
-                        $link = mysql_connect("localhost", "root", "root");
-                        mysql_select_db("TUMENQUIRY-DB", $link);
+                          $link = mysql_connect("localhost", "root", "root");
+                          mysql_select_db("TUMENQUIRY-DB", $link);
 
-                        $result = mysql_query("SELECT * FROM courses", $link);
-                        $num_rows = mysql_num_rows($result);
+                          $result = mysql_query("SELECT * FROM courses", $link);
+                          $num_rows = mysql_num_rows($result);
 
-                        echo "$num_rows";?></h3>
+                          echo "$num_rows";
+                        ?></h3>
 
                   <p>Available courses</p>
                 </div>
