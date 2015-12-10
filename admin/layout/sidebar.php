@@ -92,13 +92,13 @@
           </li>
           <!-- Tasks: style can be found in dropdown.less -->
           <li class="dropdown notifications-menu">
-             <a href="users.php" class="enquiries">
-                  <i class="fa fa-" title="messages to read"></i>
+             <a href="others.php" class="enquiries">
+                  <i class="fa fa-graduation-cap" title="messages to read"></i>
                   <span class="label label-danger">
                       <?php
                           $link = mysql_connect("localhost", "root", "root");
                           mysql_select_db("TUMENQUIRY-DB", $link);
-                          $result = mysql_query("SELECT * FROM members", $link);
+                          $result = mysql_query("SELECT * FROM courses", $link);
                           $num_rows = mysql_num_rows($result);
                           echo "$num_rows";
                        ?>
@@ -175,28 +175,26 @@
             <i class="fa fa-users"></i> <span>users</span>
           </a>
         </li>
-         <li>
-          <a href="noticeboard.php">
-            <i class="fa fa-bars"></i> <span>Notice Board</span>
+         <li class="treeview">
+          <a href="">
+            <i class="fa fa-cogs"></i>
+            <span>Admins</span>
+            <i class="fa fa-angle-left pull-right"></i>
           </a>
-        </li>
-        <li>
-          <a href="news.php">
-            <i class="fa fa-newspaper-o"></i> <span>News</span>
-          </a>
+          <ul class="treeview-menu">
+            <li><a href="admins.php"><i class="fa fa-circle-o"></i>List of Admins</a></li>
+            <li><a href="newadmin.php"><i class="fa fa-user-plus"></i> Add Admin</a></li>
+          </ul>
         </li>
         <li class="treeview">
           <a href="">
             <i class="fa fa-cogs"></i>
-            <span>Engineering Courses</span>
+            <span>Courses</span>
             <i class="fa fa-angle-left pull-right"></i>
           </a>
           <ul class="treeview-menu">
-            <li><a href="certificate.php"><i class="fa fa-circle-o"></i>Certificate</a></li>
-            <li><a href="diploma.php"><i class="fa fa-circle-o"></i>Diploma</a></li>
-            <li><a href="degree.php"><i class="fa fa-circle-o"></i> Degree</a></li>
-            <li><a href="others.php"><i class="fa fa-circle-o"></i> Others</a></li>
-            <li><a href="addcourse.php"><i class="fa fa-circle-o"></i>Add course</a></li>
+            <li><a href="others.php"><i class="fa fa-mortar-board "></i> All Courses</li>
+            <li><a href="addcourse.php"><i class="fa fa-plus-circle"></i>Add course</a></li>
           </ul>
         </li>
          <li class="treeview">

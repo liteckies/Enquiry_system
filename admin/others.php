@@ -1,7 +1,6 @@
 <?php
   require('layout/sidebar.php')
 ?>
-
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -70,7 +69,6 @@
   </div>
   <script>
   $(function () {
-    $("#example1").DataTable();
     $('#example').DataTable({
       "paging": true,
       "lengthChange": false,

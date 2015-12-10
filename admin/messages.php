@@ -78,7 +78,54 @@
                   <!-- /.tab-pane -->
                   <div class="tab-pane" id="read">
 
-                   <h5>all read enquiries goes here</h5>  
+                    <div class="active tab-pane" id="Unread">
+                    <!-- Post -->
+                     <?php
+                        @$db = mysql_pconnect("localhost", "root", "root");
+                          //checking connecting
+                        if (!$db)
+                              {
+                                  echo "Error: Could not connect to database, Please try again.";
+                              }            
+                              //selecting database to use among the databases in phpmyadmin
+                              $mysql = mysql_select_db("TUMENQUIRY-DB");
+                              if(!$mysql)
+                              {
+                                echo "Cannot select database.";
+                              }
+                     // set the query
+                        $result = mysql_query("SELECT * FROM enquiries");
+                      ?>
+                      <div class="course_table">
+                      <table id="example" class="table table-striped table-bordered display">
+                          <thead class="table_header">
+                            <tr>
+                              <th>Sender</th>
+                              <th>Phone</th>
+                              <th>Subject</th>
+                              <th>Enquiry</th>
+                              <th>Date Send</th>
+                              <th>Action</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <?php
+                              while( $row = mysql_fetch_assoc( $result ) ){
+                                echo
+                                "<tr>
+                                  <td>{$row['sender']}</td>
+                                  <td>{$row['phone']}</td>
+                                  <td>{$row['subject']}</td>
+                                  <td>{$row['body']}</td>
+                                  <td>{$row['date_send']}</td>
+                                </tr>";
+                              }
+                            ?>
+                          </tbody>
+                      </table>
+                  </div>
+                    <!-- /.post -->
+                  </div>
                   </div>
 
                   <!-- /.tab-pane -->
