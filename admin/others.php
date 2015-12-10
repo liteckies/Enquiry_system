@@ -66,14 +66,21 @@
        </div>
    </div>
   <!-- /.content-wrapper -->
-  <script>
-     $(document).ready(function() {
-    $('#example').DataTable();
-      } );
-  </script>
-
-      <!-- /.content -->
+  <!-- /.content -->
   </div>
+  <script>
+  $(function () {
+    $("#example1").DataTable();
+    $('#example').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false
+    });
+  });
+</script>
   <!-- /.content-wrapper -->
   
 <?php

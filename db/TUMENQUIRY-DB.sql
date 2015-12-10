@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 06, 2015 at 09:51 AM
--- Server version: 5.5.44-0ubuntu0.14.04.1
--- PHP Version: 5.5.9-1ubuntu4.13
+-- Generation Time: Dec 10, 2015 at 11:58 AM
+-- Server version: 5.5.46-0ubuntu0.14.04.2
+-- PHP Version: 5.5.9-1ubuntu4.14
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -23,6 +23,27 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `admin`
+--
+
+CREATE TABLE IF NOT EXISTS `admin` (
+  `id` int(23) NOT NULL AUTO_INCREMENT,
+  `username` varchar(30) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`id`, `username`, `password`) VALUES
+(1, 'brian', 'brian'),
+(2, 'simon', 'simon');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `courses`
 --
 
@@ -33,7 +54,7 @@ CREATE TABLE IF NOT EXISTS `courses` (
   `category` varchar(100) NOT NULL,
   `description` varchar(200) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=19 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=20 ;
 
 --
 -- Dumping data for table `courses`
@@ -45,7 +66,8 @@ INSERT INTO `courses` (`id`, `name`, `department`, `category`, `description`) VA
 (5, 'Media and mass communication', 'Media', 'Degree', 'Deals with disbursement of information '),
 (8, 'Food and Quality assurance ', 'Hospitality and tourism', 'Diploma', 'It takes 2 years to finish the course '),
 (17, 'Maths and Computer science ', 'Computer science and information technology', 'Degree', 'It intails partly maths and partly information technology.'),
-(18, 'Counseling and community development ', 'Liberal ', 'Diploma', 'Deals with community welfare and contuct.');
+(18, 'Counseling and community development ', 'Liberal ', 'Diploma', 'Deals with community welfare and contuct.'),
+(19, 'kdkdkdk', 'kdkdkdk', 'kdkdkdk', 'kdkdkdkd');
 
 -- --------------------------------------------------------
 
@@ -56,18 +78,21 @@ INSERT INTO `courses` (`id`, `name`, `department`, `category`, `description`) VA
 CREATE TABLE IF NOT EXISTS `enquiries` (
   `msg_id` int(20) NOT NULL AUTO_INCREMENT,
   `sender` varchar(40) NOT NULL,
+  `phone` int(40) NOT NULL,
   `subject` varchar(100) NOT NULL,
   `body` varchar(250) NOT NULL,
+  `date_send` date NOT NULL,
   `status` varchar(20) NOT NULL,
   PRIMARY KEY (`msg_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `enquiries`
 --
 
-INSERT INTO `enquiries` (`msg_id`, `sender`, `subject`, `body`, `status`) VALUES
-(1, 'brianmaithya@gmail.com', 'Enquiry for Courses', 'I wanted to know how much it is to take a degree course in mechanical engineering.', 'Unread');
+INSERT INTO `enquiries` (`msg_id`, `sender`, `phone`, `subject`, `body`, `date_send`, `status`) VALUES
+(2, 'kdkdkd', 0, 'kdkkd', 'kdkdkdk', '2015-12-09', 'unread'),
+(3, 'brianmaithya@gmail.com', 718529677, 'Enquiry', 'How can i choose my career path Im confused?', '2015-12-09', 'unread');
 
 -- --------------------------------------------------------
 

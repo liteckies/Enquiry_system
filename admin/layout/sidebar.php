@@ -9,8 +9,8 @@
   <link rel="shortcut icon" href="assets/img/eco/tumfavicon.png">
   <!-- Bootstrap 3.3.5 -->
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-  <!-- data-tables -->
-  <link rel="stylesheet" type="text/css" href="assets/css/jquery.dataTables.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="assets/css/dataTables.bootstrap.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
   <!-- Ionicons -->
@@ -142,7 +142,7 @@
           <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Alexander Pierce</p>
+          <p>Welcome, admin</p>
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>

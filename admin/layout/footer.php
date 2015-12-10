@@ -7,6 +7,9 @@
 <script>
   $.widget.bridge('uibutton', $.ui.button);
 </script>
+<!--data tables -->
+<script src="assets/js/jquery.dataTables.min.js"></script>
+<script src="assets/js/dataTables.bootstrap.min.js"></script>
 <!-- Bootstrap 3.3.5 -->
 <script src="bootstrap/js/bootstrap.min.js"></script>
 <!-- Morris.js charts -->
@@ -32,6 +35,19 @@
 <script src="plugins/fastclick/fastclick.js"></script>
 <!-- AdminLTE App -->
 <script src="dist/js/app.min.js"></script>
+<script>
+  $(function () {
+    $("#example1").DataTable();
+    $('#example').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false
+    });
+  });
+</script>
 </body>
 </html>
 
