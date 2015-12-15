@@ -1,5 +1,5 @@
-<?php
-mysql_select_db('TUMENQUIRY-DB',mysql_connect('localhost','root','root'))or die(mysql_error());
+<?php 
+ include_once 'includes/dbconfig.php';
 ?>
 <?php
 //Start session

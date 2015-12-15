@@ -22,10 +22,7 @@
               <div class="small-box bg-aqua">
                 <div class="inner">
                   <h3><?php
-                          $link = mysql_connect("localhost", "root", "root");
-                          mysql_select_db("TUMENQUIRY-DB", $link);
-
-                          $result = mysql_query("SELECT * FROM courses", $link);
+                          $result = mysql_query("SELECT * FROM courses", $db);
                           $num_rows = mysql_num_rows($result);
 
                           echo "$num_rows";
@@ -46,10 +43,7 @@
                 <div class="small-box bg-green">
                   <div class="inner">
                     <h3><?php
-                        $link = mysql_connect("localhost", "root", "root");
-                        mysql_select_db("TUMENQUIRY-DB", $link);
-
-                        $result = mysql_query("SELECT * FROM members", $link);
+                        $result = mysql_query("SELECT * FROM members", $db);
                         $num_rows = mysql_num_rows($result);
 
                         echo "$num_rows";?></h3>
@@ -69,10 +63,7 @@
                 <div class="small-box bg-yellow">
                   <div class="inner">
                     <h3><?php
-                        $link = mysql_connect("localhost", "root", "root");
-                        mysql_select_db("TUMENQUIRY-DB", $link);
-
-                        $result = mysql_query("SELECT * FROM enquiries", $link);
+                        $result = mysql_query("SELECT * FROM enquiries", $db);
                         $num_rows = mysql_num_rows($result);
 
                         echo "$num_rows";?></h3>
@@ -91,10 +82,7 @@
                 <div class="small-box bg-red">
                   <div class="inner">
                     <h3><?php
-                        $link = mysql_connect("localhost", "root", "root");
-                        mysql_select_db("TUMENQUIRY-DB", $link);
-
-                        $result = mysql_query("SELECT * FROM enquiries", $link);
+                        $result = mysql_query("SELECT * FROM enquiries", $db);
                         $num_rows = mysql_num_rows($result);
 
                         echo "$num_rows";?></h3>

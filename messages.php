@@ -10,18 +10,6 @@
     $monthh = strtotime('now');
     $mon = date('Y-m-d-l',$monthh);
  // variables for input data
-@$db = mysql_pconnect("localhost", "root", "root");
-          //checking connecting
-              if (!$db)
-                      {
-                        echo "Error: Could not connect to database, Please try again.";
-                      }            
-                        //selecting database to use among the databases in phpmyadmin
-                    $mysql = mysql_select_db("TUMENQUIRY-DB");
-                    if(!$mysql)
-                      {
-                        echo "Cannot select database.";
-                      }
  // sql query for inserting data into database
  $sql_query = "INSERT INTO enquiries(sender,phone,subject,body,date_send,status) VALUES('$email','$phone','$subject','$enquiry','$mon','unread')";
  // sql query for inserting data into database

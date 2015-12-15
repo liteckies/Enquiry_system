@@ -1,4 +1,5 @@
 <?php
+ include_once 'includes/dbconfig.php';
 session_start(); // Starting Session
 $error=''; // Variable To Store Error Message
 if (isset($_POST['submit'])) {

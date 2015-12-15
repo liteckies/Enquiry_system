@@ -1,3 +1,6 @@
+<?php 
+ include_once 'includes/dbconfig.php';
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -66,9 +69,7 @@
                   <i class="fa fa-envelope-o" title="messages to read"></i>
                   <span class="label label-success">
                       <?php
-                          $link = mysql_connect("localhost", "root", "root");
-                          mysql_select_db("TUMENQUIRY-DB", $link);
-                          $result = mysql_query("SELECT * FROM enquiries", $link);
+                          $result = mysql_query("SELECT * FROM enquiries", $db);
                           $num_rows = mysql_num_rows($result);
                           echo "$num_rows";
                        ?>
@@ -81,9 +82,7 @@
                   <i class="fa fa-users" title="messages to read"></i>
                   <span class="label label-warning">
                       <?php
-                          $link = mysql_connect("localhost", "root", "root");
-                          mysql_select_db("TUMENQUIRY-DB", $link);
-                          $result = mysql_query("SELECT * FROM members", $link);
+                          $result = mysql_query("SELECT * FROM members", $db);
                           $num_rows = mysql_num_rows($result);
                           echo "$num_rows";
                        ?>
@@ -96,9 +95,7 @@
                   <i class="fa fa-graduation-cap" title="messages to read"></i>
                   <span class="label label-danger">
                       <?php
-                          $link = mysql_connect("localhost", "root", "root");
-                          mysql_select_db("TUMENQUIRY-DB", $link);
-                          $result = mysql_query("SELECT * FROM courses", $link);
+                          $result = mysql_query("SELECT * FROM courses", $db);
                           $num_rows = mysql_num_rows($result);
                           echo "$num_rows";
                        ?>

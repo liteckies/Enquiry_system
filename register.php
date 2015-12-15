@@ -1,5 +1,6 @@
 <?php
      require('layout/registration_header.php');
+      include_once 'includes/dbconfig.php';
      ?>
      <?php
      if(@$_POST['submit'])
@@ -14,19 +15,6 @@
           if($_POST['password'] != $_POST['passwordConfirm']){
               $error = 'Passwords do not match.';
                }
-
-          @$db = mysql_pconnect("localhost", "root", "root");
-          //checking connecting
-              if (!$db)
-                      {
-                        echo "Error: Could not connect to database, Please try again.";
-                      }            
-                        //selecting database to use among the databases in phpmyadmin
-                    $mysql = mysql_select_db("TUMENQUIRY-DB");
-                    if(!$mysql)
-                      {
-                        echo "Cannot select database.";
-                      }
                         //quering the selected database
                      $rs=mysql_query("select * from members where username='$username'");
                           if (mysql_num_rows($rs)>0)
