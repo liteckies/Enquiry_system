@@ -1,4 +1,32 @@
 <?php
+include_once 'includes/dbconfig.php';
+
+// delete condition
+if(isset($_GET['id']))
+{
+ $sql_query="DELETE FROM admin WHERE id=".$_GET['id'];
+ mysql_query($sql_query);
+ header("Location: $_SERVER[PHP_SELF]");
+}
+// delete condition
+?>
+<script type="text/javascript">
+function edit_id(id)
+{
+ if(confirm('Sure to edit ?'))
+ {
+  window.location.href='edit_admin.php?edit_id='+id;
+ }
+}
+function id(id)
+{
+ if(confirm('Sure to Delete this admin ?'))
+ {
+  window.location.href='admins.php?id='+id;
+ }
+}
+</script>
+<?php
   require('layout/sidebar.php')
 ?>
   <!-- Content Wrapper. Contains page content -->
@@ -26,23 +54,26 @@
                     <table id="example" class="table table-striped table-bordered display">
                         <thead class="table_header">
                           <tr>
-                            <th>id</th>
                             <th>Username</th>
                             <th>Email</th>
-                            <th>Operations</th>
                           </tr>
                         </thead>
                         <tbody>
-                          <?php
-                            while( $row = mysql_fetch_assoc( $result ) ){
-                              echo
-                              "<tr>
-                                <td>{$row['id']}</td>
-                                <td>{$row['username']}</td>
-                                <td>{$row['email']}</td>
-                              </tr>";
-                            }
-                          ?>
+                           <?php
+                              $sql_query="SELECT * FROM admin";
+                              $result_set=mysql_query($sql_query);
+                              while($row=mysql_fetch_row($result_set))
+                             {
+                                ?>
+                             <tr>
+                              <td><?php echo $row[1]; ?></td>
+                              <td><?php echo $row[2]; ?></td>
+                              <td align="center"><a href="javascript:edit_id('<?php echo $row[0]; ?>')"><button type="button" class="btn btn-block btn-success btn-xs"> <div class="fa fa-edit"></div> Edit</button></a></td>
+                              <td align="center"><a href="javascript:id('<?php echo $row[0]; ?>')"><button type="button" class="btn btn-block btn-danger btn-xs"><div class="fa  fa-warning"></div> Remove</button></a></td>
+                             </tr>
+                             <?php
+                                  }
+                                ?>
                         </tbody>
                     </table>
                  </div>

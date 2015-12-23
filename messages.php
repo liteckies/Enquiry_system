@@ -97,7 +97,6 @@
                           <i class="fa fa-arrow-circle-right"></i></button>
                         </div>
                       </div>
-          </div>
                 </form>
             </div>
             

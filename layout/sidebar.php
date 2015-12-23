@@ -118,7 +118,7 @@
         <li class="header">MAIN NAVIGATION</li>
         <li class="active treeview">
           <a href="members_page.php">
-            <i class="fa fa-dashboard"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
+            <i class="fa fa-dashboard"></i> <span>Dashboard</span>
           </a>
         </li>
         <li>
@@ -126,23 +126,11 @@
             <i class="fa fa-user"></i> <span>My Account</span>
           </a>
         </li>
-        <li>
-          <a href="news.php">
-            <i class="fa fa-newspaper-o"></i> <span>News</span>
-          </a>
-        </li>
         <li class="treeview">
-          <a href="">
+          <a href="all_courses.php">
             <i class="fa fa-cogs"></i>
-            <span>Engineering Courses</span>
-            <i class="fa fa-angle-left pull-right"></i>
+            <span>Available Courses</span>
           </a>
-          <ul class="treeview-menu">
-            <li><a href="certificate.php"><i class="fa fa-circle-o"></i>Certificate</a></li>
-            <li><a href="diploma.php"><i class="fa fa-circle-o"></i>Diploma</a></li>
-            <li><a href="degree.php"><i class="fa fa-circle-o"></i> Degree</a></li>
-            <li><a href="all_courses.php"><i class="fa fa-circle-o"></i>All</a></li>
-          </ul>
         </li>
          <li class="treeview">
           <a href="messages.php">

@@ -18,6 +18,7 @@
   ?>
  <script type="text/javascript">
   alert('Admin inserted successifully');
+ window.location.href='admins.php'; 
   </script>
   <?php
  }

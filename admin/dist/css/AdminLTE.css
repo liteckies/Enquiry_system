@@ -22,7 +22,26 @@ body {
 .tab-pane{
   width: 100%;
 }
+.update_button{
+  width: 20%;
+}
+.messages_table{
 
+  width: 100%;
+}
+.cancel_button{
+ width: 20%;
+  margin-left: 180px;
+  clear: both;
+}
+.upcancel_buttons{
+  margin-left: 144px;
+  float: inline;
+}
+.upcancel_buttons button {
+ width: 100px;
+ height: 30px;
+}
 .insert-course{
     width: 850px;
     margin: 50px 0 0 100px;

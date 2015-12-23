@@ -1,4 +1,32 @@
 <?php
+include_once 'includes/dbconfig.php';
+
+// delete condition
+if(isset($_GET['id']))
+{
+ $sql_query="DELETE FROM courses WHERE id=".$_GET['id'];
+ mysql_query($sql_query);
+ header("Location: $_SERVER[PHP_SELF]");
+}
+// delete condition
+?>
+<script type="text/javascript">
+function edit_id(id)
+{
+ if(confirm('Sure to edit ?'))
+ {
+  window.location.href='edit_course.php?edit_id='+id;
+ }
+}
+function id(id)
+{
+ if(confirm('Sure to Delete this course ?'))
+ {
+  window.location.href='others.php?id='+id;
+ }
+}
+</script>
+<?php
   require('layout/sidebar.php')
 ?>
   <!-- Content Wrapper. Contains page content -->
@@ -16,35 +44,33 @@
     </section>
      <!-- Main content --> 
      <div class="all-courses">
-          <?php
-         // set the query
-            $result = mysql_query("SELECT * FROM courses");
-            ?>
             <div class="courses_outer">
                  <div class="course_table">
                         <table id="example" class="table table-striped table-bordered display">
                             <thead class="table_header">
                               <tr>
-                                <th>Id</th>
                                 <th>Name</th>
                                 <th>Department</th>
                                 <th>Category</th>
-                                <th>Description </th>
                               </tr>
                             </thead>
                             <tbody>
-                              <?php
-                                while( $row = mysql_fetch_assoc( $result ) ){
-                                  echo
-                                  "<tr>
-                                    <td>{$row['id']}</td>
-                                    <td>{$row['name']}</td>
-                                    <td>{$row['department']}</td>
-                                    <td>{$row['category']}</td>
-                                    <td>{$row['description']}</td>
-                                  </tr>";
-                                }
-                              ?>
+                            <?php
+                              $sql_query="SELECT * FROM courses";
+                              $result_set=mysql_query($sql_query);
+                              while($row=mysql_fetch_row($result_set))
+                             {
+                                ?>
+                             <tr>
+                              <td><?php echo $row[1]; ?></td>
+                              <td><?php echo $row[2]; ?></td>
+                              <td><?php echo $row[3]; ?></td>
+                              <td align="center"><a href="javascript:edit_id('<?php echo $row[0]; ?>')"><button type="button" class="btn btn-block btn-success btn-xs"> <div class="fa fa-edit"></div> Edit</button></a></td>
+                              <td align="center"><a href="javascript:id('<?php echo $row[0]; ?>')"><button type="button" class="btn btn-block btn-danger btn-xs"><div class="fa  fa-warning"></div> Delete</button></a></td>
+                             </tr>
+                             <?php
+                                  }
+                                ?>
                             </tbody>
                         </table>
                      </div>

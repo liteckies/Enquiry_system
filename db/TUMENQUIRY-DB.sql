@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 10, 2015 at 11:58 AM
+-- Generation Time: Dec 21, 2015 at 12:47 AM
 -- Server version: 5.5.46-0ubuntu0.14.04.2
 -- PHP Version: 5.5.9-1ubuntu4.14
 
@@ -29,17 +29,18 @@ SET time_zone = "+00:00";
 CREATE TABLE IF NOT EXISTS `admin` (
   `id` int(23) NOT NULL AUTO_INCREMENT,
   `username` varchar(30) NOT NULL,
+  `email` varchar(49) NOT NULL,
   `password` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=27 ;
 
 --
 -- Dumping data for table `admin`
 --
 
-INSERT INTO `admin` (`id`, `username`, `password`) VALUES
-(1, 'brian', 'brian'),
-(2, 'simon', 'simon');
+INSERT INTO `admin` (`id`, `username`, `email`, `password`) VALUES
+(25, 'janet', 'janet@gmail.com', 'janet'),
+(26, 'kitoo', 'kitoo@yahoo.com', 'kitoo');
 
 -- --------------------------------------------------------
 
@@ -52,22 +53,17 @@ CREATE TABLE IF NOT EXISTS `courses` (
   `name` varchar(100) NOT NULL,
   `department` varchar(100) NOT NULL,
   `category` varchar(100) NOT NULL,
-  `description` varchar(200) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=20 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=29 ;
 
 --
 -- Dumping data for table `courses`
 --
 
-INSERT INTO `courses` (`id`, `name`, `department`, `category`, `description`) VALUES
-(1, 'Information technology', 'Computer science and information technology', 'Degree', 'A marketable course completed in 4 years.'),
-(4, 'Human resource management', 'Bussiness administration', 'Diploma', 'Trains people on how to manage organization resorces '),
-(5, 'Media and mass communication', 'Media', 'Degree', 'Deals with disbursement of information '),
-(8, 'Food and Quality assurance ', 'Hospitality and tourism', 'Diploma', 'It takes 2 years to finish the course '),
-(17, 'Maths and Computer science ', 'Computer science and information technology', 'Degree', 'It intails partly maths and partly information technology.'),
-(18, 'Counseling and community development ', 'Liberal ', 'Diploma', 'Deals with community welfare and contuct.'),
-(19, 'kdkdkdk', 'kdkdkdk', 'kdkdkdk', 'kdkdkdkd');
+INSERT INTO `courses` (`id`, `name`, `department`, `category`) VALUES
+(26, 'Community health and cancelling', 'Hospitality ', 'Certificate'),
+(27, 'Maths and Computer science', 'Computer science', 'Degree'),
+(28, 'Marine Engineering', 'Engineering and Technology', 'Degree');
 
 -- --------------------------------------------------------
 
@@ -84,15 +80,15 @@ CREATE TABLE IF NOT EXISTS `enquiries` (
   `date_send` date NOT NULL,
   `status` varchar(20) NOT NULL,
   PRIMARY KEY (`msg_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Dumping data for table `enquiries`
 --
 
 INSERT INTO `enquiries` (`msg_id`, `sender`, `phone`, `subject`, `body`, `date_send`, `status`) VALUES
-(2, 'kdkdkd', 0, 'kdkkd', 'kdkdkdk', '2015-12-09', 'unread'),
-(3, 'brianmaithya@gmail.com', 718529677, 'Enquiry', 'How can i choose my career path Im confused?', '2015-12-09', 'unread');
+(3, 'brianmaithya@gmail.com', 718529677, 'Enquiry', 'How can i choose my career path Im confused?', '2015-12-09', 'unread'),
+(4, 'cynthia@gmail.com', 789657654, 'Enquiry', 'How do i overcome making wrong career choice', '2015-12-10', 'unread');
 
 -- --------------------------------------------------------
 
@@ -106,7 +102,7 @@ CREATE TABLE IF NOT EXISTS `members` (
   `email` varchar(40) NOT NULL,
   `password` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=48 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=49 ;
 
 --
 -- Dumping data for table `members`
@@ -121,7 +117,8 @@ INSERT INTO `members` (`id`, `username`, `email`, `password`) VALUES
 (44, 'Katula', 'katula@gmail.com', 'katula'),
 (45, 'David ', 'david@gmail.com', 'kavid'),
 (46, 'Dennis', 'Deno@gmail.com', 'deno'),
-(47, 'Matuvi', 'matuvi@gmail.com', 'matuvi');
+(47, 'Matuvi', 'matuvi@gmail.com', 'matuvi'),
+(48, 'kamwana', 'kamwana@gmail.com', 'kamwana');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

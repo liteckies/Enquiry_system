@@ -82,17 +82,17 @@
                 <div class="small-box bg-red">
                   <div class="inner">
                     <h3><?php
-                        $result = mysql_query("SELECT * FROM enquiries", $db);
+                        $result = mysql_query("SELECT * FROM admin", $db);
                         $num_rows = mysql_num_rows($result);
 
                         echo "$num_rows";?></h3>
 
-                    <p>Enquiries</p>
+                    <p>Administrator (s)</p>
                   </div>
                   <div class="icon">
-                    <i class="fa fa-home"></i>
+                    <i class="fa fa-key"></i>
                   </div>
-                  <a href="messages.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                  <a href="admins.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
                 </div>
               </div>
               <!-- ./col -->

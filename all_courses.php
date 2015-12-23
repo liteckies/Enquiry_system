@@ -16,41 +16,50 @@
       </ol>
     </section>
      <!-- Main content --> 
-     <?php
-     // set the query
-        $result = mysql_query("SELECT * FROM courses");
-        ?>
         <div class="courses_outer">
              <div class="course_table">
                     <table id="example" class="table table-striped table-bordered display">
                         <thead class="table_header">
                           <tr>
-                            <th>#id</th>
                             <th>Name</th>
                             <th>Department</th>
                             <th>Category</th>
-                            <th>Description </th>
                           </tr>
                         </thead>
                         <tbody>
                           <?php
-                            while( $row = mysql_fetch_assoc( $result ) ){
-                              echo
-                              "<tr>
-                                <td>{$row['id']}</td>
-                                <td>{$row['name']}</td>
-                                <td>{$row['department']}</td>
-                                <td>{$row['category']}</td>
-                                <td>{$row['description']}</td>
-                              </tr>";
-                            }
-                          ?>
+                              $sql_query="SELECT * FROM courses";
+                              $result_set=mysql_query($sql_query);
+                              while($row=mysql_fetch_row($result_set))
+                             {
+                                ?>
+                             <tr>
+                              <td><?php echo $row[1]; ?></td>
+                              <td><?php echo $row[2]; ?></td>
+                              <td><?php echo $row[3]; ?></td>
+                              <td align="center"><a href="javascript:edit_id('<?php echo $row[0]; ?>')"><button type="button" class="btn btn-block btn-success btn-xs">More info  <div class="fa fa-angle-double-right "></div></button></a></td>
+                             </tr>
+                             <?php
+                                  }
+                                ?>
                         </tbody>
                     </table>
                  </div>
                <!-- /.content -->
         </div>
    </div>
+   <script>
+  $(function () {
+    $('#example').DataTable({
+      "paging": true,
+      "lengthChange": true,
+      "searching": true,
+      "ordering": true,
+      "info": true,
+      "autoWidth": true
+    });
+  });
+</script>
   <!-- /.content-wrapper -->
   
 <?php

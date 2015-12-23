@@ -1,14 +1,13 @@
 <?php
-  @$db = mysql_pconnect("localhost", "root", "root");
-    //checking connecting
-     if (!$db)
-        {
-          echo "Error: Could not connect to database, Please try again.";
-        }            
-        //selecting database to use among the databases in phpmyadmin
-        $mysql = mysql_select_db("TUMENQUIRY-DB", $db);
-         if(!$mysql)
-            {
-                echo "Cannot select database.";
-            }
+ERROR_REPORTING(0);
+define("HOSTNAME","localhost");
+define("DATABASE","TUMENQUIRY-DB");
+define("USERNAME","root");
+define("PASSWORD","root");
+   
+@$db = mysql_connect(HOSTNAME,USERNAME,PASSWORD)or die('Error!');
+
+mysql_select_db(DATABASE,$db);
+
+DEFINE("PUBLIC_PAGE");
 ?>

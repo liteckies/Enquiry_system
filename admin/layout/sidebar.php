@@ -79,7 +79,7 @@
           <!-- Notifications: style can be found in dropdown.less -->
           <li class="dropdown notifications-menu">
              <a href="users.php" class="enquiries">
-                  <i class="fa fa-users" title="messages to read"></i>
+                  <i class="fa fa-users" title="System users"></i>
                   <span class="label label-warning">
                       <?php
                           $result = mysql_query("SELECT * FROM members", $db);
@@ -92,10 +92,23 @@
           <!-- Tasks: style can be found in dropdown.less -->
           <li class="dropdown notifications-menu">
              <a href="others.php" class="enquiries">
-                  <i class="fa fa-graduation-cap" title="messages to read"></i>
+                  <i class="fa fa-graduation-cap" title="Available courses"></i>
                   <span class="label label-danger">
                       <?php
                           $result = mysql_query("SELECT * FROM courses", $db);
+                          $num_rows = mysql_num_rows($result);
+                          echo "$num_rows";
+                       ?>
+                   </span>
+               </a>
+          </li>
+          <!-- Tasks: style can be found in dropdown.less -->
+          <li class="dropdown notifications-menu">
+             <a href="others.php" class="enquiries">
+                  <i class="fa fa-user" title="list of Admins"></i>
+                  <span class="label label-danger">
+                      <?php
+                          $result = mysql_query("SELECT * FROM admin", $db);
                           $num_rows = mysql_num_rows($result);
                           echo "$num_rows";
                        ?>

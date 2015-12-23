@@ -11,7 +11,7 @@
  // variables for input data
 
  // sql query for inserting data into database
- $sql_query = "INSERT INTO courses(name,department,category,description) VALUES('$name','$department','$category','$description')";
+ $sql_query = "INSERT INTO courses(name,department,category) VALUES('$name','$department','$category')";
  // sql query for inserting data into database
  
  // sql query execution function
@@ -71,13 +71,6 @@
 
                         <div class="col-sm-10">
                           <input type="text" class="form-control" name="category" placeholder="Choose category" required>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label for="inputExperience" class="col-sm-2 control-label">Description</label>
-
-                        <div class="col-sm-10">
-                          <textarea class="form-control" name="description" placeholder="Course Description" required></textarea>
                         </div>
                       </div>
                       <div class="form-group">

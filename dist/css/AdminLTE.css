@@ -30,7 +30,16 @@ body {
  box-shadow: none;
 
 }
-
+.courses_outer{
+  background-color: #ffffff;
+  margin-top: 25px;
+  width: 90%;
+  margin-left: 20px;
+}
+.course_table{
+  width: 100%;
+  padding:5px;
+}
 /*  ... /ends here*/
 
 .layout-boxed html,

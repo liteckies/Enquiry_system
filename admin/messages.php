@@ -1,4 +1,39 @@
 <?php
+include_once 'includes/dbconfig.php';
+
+// delete condition
+if(isset($_GET['msg_id']))
+{
+ $sql_query="DELETE FROM enquiries WHERE msg_id=".$_GET['msg_id'];
+ mysql_query($sql_query);
+ header("Location: $_SERVER[PHP_SELF]");
+}
+// delete condition
+?>
+<script type="text/javascript">
+function edt_id(id)
+{
+ if(confirm('Sure to edit ?'))
+ {
+  window.location.href='edit_data.php?edit_id='+id;
+ }
+}
+function mark_id(id)
+{
+ if(confirm('Sure to mark enquiry as read?'))
+ {
+  window.location.href='enquiry_read.php?mark_id='+id;
+ }
+}
+function msg_id(id)
+{
+ if(confirm('Sure to Delete this enquiry?'))
+ {
+  window.location.href='messages.php?msg_id='+id;
+ }
+}
+</script>
+<?php
   require('layout/sidebar.php')
 ?>
 
@@ -32,7 +67,7 @@
                      // set the query
                         $result = mysql_query("SELECT * FROM enquiries");
                       ?>
-                      <div class="course_table">
+                      <div class="messages_table">
                       <table id="example" class="table table-striped table-bordered display">
                           <thead class="table_header">
                             <tr>
@@ -41,22 +76,28 @@
                               <th>Subject</th>
                               <th>Enquiry</th>
                               <th>Date Send</th>
-                              <th>Action</th>
                             </tr>
                           </thead>
                           <tbody>
-                            <?php
-                              while( $row = mysql_fetch_assoc( $result ) ){
-                                echo
-                                "<tr>
-                                  <td>{$row['sender']}</td>
-                                  <td>{$row['phone']}</td>
-                                  <td>{$row['subject']}</td>
-                                  <td>{$row['body']}</td>
-                                  <td>{$row['date_send']}</td>
-                                </tr>";
-                              }
-                            ?>
+                           <?php
+                              $sql_query="SELECT * FROM enquiries";
+                              $result_set=mysql_query($sql_query);
+                              while($row=mysql_fetch_row($result_set))
+                             {
+                                ?>
+                             <tr>
+                              <td><?php echo $row[1]; ?></td>
+                              <td><?php echo $row[2]; ?></td>
+                              <td><?php echo $row[3]; ?></td>
+                              <td><?php echo $row[4]; ?></td>
+                              <td><?php echo $row[5]; ?></td>
+                                <td align="center"><a href="compose.php"><button type="button" class="btn btn-block btn-success btn-xs"> <div class="fa fa-mail-reply"></div> reply</button></a></td>
+                                <td align="center"><a href="javascript:mark_id('<?php echo $row[0]; ?>')"><button type="button" class="btn btn-block btn-success btn-xs"> <div class="fa fa-folder-open"></div> Mark as read</button></a></td>
+                             
+                             </tr>
+                             <?php
+                                  }
+                                ?>
                           </tbody>
                       </table>
                   </div>
@@ -84,7 +125,7 @@
                      // set the query
                         $result = mysql_query("SELECT * FROM enquiries");
                       ?>
-                      <div class="course_table">
+                      <div class="messages_table">
                       <table id="example" class="table table-striped table-bordered display">
                           <thead class="table_header">
                             <tr>
@@ -92,23 +133,28 @@
                               <th>Phone</th>
                               <th>Subject</th>
                               <th>Enquiry</th>
-                              <th>Date Send</th>
-                              <th>Action</th>
+                              <th>Date Send</th
                             </tr>
                           </thead>
                           <tbody>
                             <?php
-                              while( $row = mysql_fetch_assoc( $result ) ){
-                                echo
-                                "<tr>
-                                  <td>{$row['sender']}</td>
-                                  <td>{$row['phone']}</td>
-                                  <td>{$row['subject']}</td>
-                                  <td>{$row['body']}</td>
-                                  <td>{$row['date_send']}</td>
-                                </tr>";
-                              }
-                            ?>
+                              $sql_query="SELECT * FROM enquiries";
+                              $result_set=mysql_query($sql_query);
+                              while($row=mysql_fetch_row($result_set))
+                             {
+                                ?>
+                             <tr>
+                              <td><?php echo $row[1]; ?></td>
+                              <td><?php echo $row[2]; ?></td>
+                              <td><?php echo $row[3]; ?></td>
+                              <td><?php echo $row[4]; ?></td>
+                              <td><?php echo $row[5]; ?></td>
+                               <td align="center"><a href="compose.php"><button type="button" class="btn btn-block btn-success btn-xs"> <div class="fa fa-mail-reply"></div> reply</button></a></td>
+                              <td align="center"><a href="javascript:msg_id('<?php echo $row[0]; ?>')"><button type="button" class="btn btn-block btn-warning btn-xs"><div class="fa  fa-warning"></div> Delete</button></a></td>
+                             </tr>
+                             <?php
+                                  }
+                                ?>
                           </tbody>
                       </table>
                   </div>
@@ -143,22 +189,27 @@
                               <th>Subject</th>
                               <th>Enquiry</th>
                               <th>Date Send</th>
-                              <th>Action</th>
                             </tr>
                           </thead>
                           <tbody>
-                            <?php
-                              while( $row = mysql_fetch_assoc( $result ) ){
-                                echo
-                                "<tr>
-                                  <td>{$row['sender']}</td>
-                                  <td>{$row['phone']}</td>
-                                  <td>{$row['subject']}</td>
-                                  <td>{$row['body']}</td>
-                                  <td>{$row['date_send']}</td>
-                                </tr>";
-                              }
-                            ?>
+                           <?php
+                              $sql_query="SELECT * FROM enquiries";
+                              $result_set=mysql_query($sql_query);
+                              while($row=mysql_fetch_row($result_set))
+                             {
+                                ?>
+                             <tr>
+                              <td><?php echo $row[1]; ?></td>
+                              <td><?php echo $row[2]; ?></td>
+                              <td><?php echo $row[3]; ?></td>
+                              <td><?php echo $row[4]; ?></td>
+                              <td><?php echo $row[5]; ?></td>
+                               <td align="center"><a href="compose.php"><button type="button" class="btn btn-block btn-success btn-xs"> <div class="fa fa-mail-reply"></div> reply</button></a></td>
+                              <td align="center"><a href="javascript:msg_id('<?php echo $row[0]; ?>')"><button type="button" class="btn btn-block btn-warning btn-xs"><div class="fa  fa-warning"></div> Delete</button></a></td>
+                             </tr>
+                             <?php
+                                  }
+                                ?>
                           </tbody>
                       </table>
                   </div>
@@ -170,8 +221,7 @@
             <!-- /.nav-tabs-custom -->
         </div>
       <!-- /.col --> 
-
-      <!-- /.content -->
+     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
   
