@@ -55,8 +55,8 @@ function msg_id(id)
         <div class="col-md-11 message-container">
             <div class="nav-tabs-custom">
               <ul class="nav nav-tabs">
-                <li class="active"><a href="#Unread" data-toggle="tab">Unread</a></li>
-                <li><a href="#read" data-toggle="tab">read</a></li>
+                <li class="active"><a href="#Unread" data-toggle="tab">Pending</a></li>
+                <li><a href="#read" data-toggle="tab">Read</a></li>
                 <li><a href="#all" data-toggle="tab">All</a></li>
               </ul>
               <div class="tab-content">
@@ -65,7 +65,7 @@ function msg_id(id)
                     <!-- Post -->
                      <?php
                      // set the query
-                        $result = mysql_query("SELECT * FROM enquiries");
+                        $result = mysql_query("SELECT * FROM enquiries ");
                       ?>
                       <div class="messages_table">
                       <table id="example" class="table table-striped table-bordered display">
@@ -80,7 +80,7 @@ function msg_id(id)
                           </thead>
                           <tbody>
                            <?php
-                              $sql_query="SELECT * FROM enquiries";
+                              $sql_query="SELECT * FROM enquiries WHERE status='unread' ";
                               $result_set=mysql_query($sql_query);
                               while($row=mysql_fetch_row($result_set))
                              {
@@ -123,7 +123,7 @@ function msg_id(id)
                                 echo "Cannot select database.";
                               }
                      // set the query
-                        $result = mysql_query("SELECT * FROM enquiries");
+                        $result = mysql_query("SELECT * FROM enquiries ");
                       ?>
                       <div class="messages_table">
                       <table id="example" class="table table-striped table-bordered display">
@@ -138,7 +138,7 @@ function msg_id(id)
                           </thead>
                           <tbody>
                             <?php
-                              $sql_query="SELECT * FROM enquiries";
+                              $sql_query="SELECT * FROM enquiries WHERE status='read'";
                               $result_set=mysql_query($sql_query);
                               while($row=mysql_fetch_row($result_set))
                              {

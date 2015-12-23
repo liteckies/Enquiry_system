@@ -69,7 +69,7 @@
                   <i class="fa fa-envelope-o" title="messages to read"></i>
                   <span class="label label-success">
                       <?php
-                          $result = mysql_query("SELECT * FROM enquiries", $db);
+                          $result = mysql_query("SELECT * FROM enquiries WHERE status='unread'", $db);
                           $num_rows = mysql_num_rows($result);
                           echo "$num_rows";
                        ?>

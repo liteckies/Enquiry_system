@@ -80,7 +80,7 @@ if(isset($_POST['btn-cancel']))
                         <label for="email" class="col-sm-1 control-label"></label>
 
                         <div class="col-sm-11">
-                           <input type="text" class="form-control" name="body" placeholder="enquiry here.." value="<?php echo $fetched_row['sender']; ?>" required>
+                           <input type="text" class="form-control" name="sender" placeholder="enquiry here.." value="<?php echo $fetched_row['sender']; ?>" required>
                         </div>
                       </div>
                        <div class="form-group">
