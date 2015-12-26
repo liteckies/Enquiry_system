@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 21, 2015 at 12:47 AM
+-- Generation Time: Dec 26, 2015 at 11:09 PM
 -- Server version: 5.5.46-0ubuntu0.14.04.2
 -- PHP Version: 5.5.9-1ubuntu4.14
 
@@ -32,15 +32,15 @@ CREATE TABLE IF NOT EXISTS `admin` (
   `email` varchar(49) NOT NULL,
   `password` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=27 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=33 ;
 
 --
 -- Dumping data for table `admin`
 --
 
 INSERT INTO `admin` (`id`, `username`, `email`, `password`) VALUES
-(25, 'janet', 'janet@gmail.com', 'janet'),
-(26, 'kitoo', 'kitoo@yahoo.com', 'kitoo');
+(28, 'brian', 'brianmaithya@gmail.com', 'brian'),
+(32, 'Rechael', 'rechael@gmail.com', 'recahel');
 
 -- --------------------------------------------------------
 
@@ -54,16 +54,40 @@ CREATE TABLE IF NOT EXISTS `courses` (
   `department` varchar(100) NOT NULL,
   `category` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=29 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=31 ;
 
 --
 -- Dumping data for table `courses`
 --
 
 INSERT INTO `courses` (`id`, `name`, `department`, `category`) VALUES
-(26, 'Community health and cancelling', 'Hospitality ', 'Certificate'),
-(27, 'Maths and Computer science', 'Computer science', 'Degree'),
-(28, 'Marine Engineering', 'Engineering and Technology', 'Degree');
+(27, 'Maths and Computer science', 'Computer science', 'Diploma'),
+(28, 'Marine Engineering', 'Engineering and Technology', 'Degree'),
+(30, 'Statics and Computer science', 'Maths and Computer science', 'Degree');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `courses_info`
+--
+
+CREATE TABLE IF NOT EXISTS `courses_info` (
+  `course_id` int(40) NOT NULL AUTO_INCREMENT,
+  `course_name` varchar(100) NOT NULL,
+  `duration` varchar(40) NOT NULL,
+  `qualifications` varchar(100) NOT NULL,
+  `fees` varchar(50) NOT NULL,
+  PRIMARY KEY (`course_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+
+--
+-- Dumping data for table `courses_info`
+--
+
+INSERT INTO `courses_info` (`course_id`, `course_name`, `duration`, `qualifications`, `fees`) VALUES
+(1, 'BSc Information Technology', '4 years', 'Overal c+ with atleast C+ in phisics and Chem', ' 70,000'),
+(4, 'Bachelor of Engineering in Mechanical ', '5 Yrs', 'C+ with atleast c+ in maths, chem and physics', '80,000'),
+(6, 'BSc Electrical Engineering', '5 Yrs', 'C+ with atleast c- in Maths and c+ in Physics', '70,000');
 
 -- --------------------------------------------------------
 
@@ -80,15 +104,20 @@ CREATE TABLE IF NOT EXISTS `enquiries` (
   `date_send` date NOT NULL,
   `status` varchar(20) NOT NULL,
   PRIMARY KEY (`msg_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=16 ;
 
 --
 -- Dumping data for table `enquiries`
 --
 
 INSERT INTO `enquiries` (`msg_id`, `sender`, `phone`, `subject`, `body`, `date_send`, `status`) VALUES
-(3, 'brianmaithya@gmail.com', 718529677, 'Enquiry', 'How can i choose my career path Im confused?', '2015-12-09', 'unread'),
-(4, 'cynthia@gmail.com', 789657654, 'Enquiry', 'How do i overcome making wrong career choice', '2015-12-10', 'unread');
+(7, 'brianmaithya@gmail.com', 702354675, 'Enquiry', 'How to choose a career choice...', '2015-12-21', 'read'),
+(8, 'katula@gmail.com', 702345676, 'Enquiry', 'Need some advice on career choice', '2015-12-21', 'read'),
+(9, 'Kamau@gmail.com', 783465746, 'Enquiry', 'How long does engineering courses take?', '2015-12-21', 'read'),
+(12, 'kimondo@gmail.com', 84879892, 'Enquiry', 'How to know whether ive qualified?', '2015-12-24', 'read'),
+(13, 'Eugine@yahoo.com', 7828364, 'Enquiry', 'How do i know whether ive qualified?', '2015-12-24', 'read'),
+(14, 'kitoo@gmail.com', 723465765, 'Enquiry', 'Im not seeing the qualifications of the course i want to do?', '2015-12-26', 'unread'),
+(15, 'janet@gmail.com', 704720293, 'Enquiry', 'How can i come to Tum? Me forbid.', '2015-12-26', 'read');
 
 -- --------------------------------------------------------
 
