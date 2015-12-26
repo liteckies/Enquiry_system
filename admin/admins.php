@@ -69,7 +69,7 @@ function id(id)
                               <td><?php echo $row[1]; ?></td>
                               <td><?php echo $row[2]; ?></td>
                               <td align="center"><a href="javascript:edit_id('<?php echo $row[0]; ?>')"><button type="button" class="btn btn-block btn-success btn-xs"> <div class="fa fa-edit"></div> Edit</button></a></td>
-                              <td align="center"><a href="javascript:id('<?php echo $row[0]; ?>')"><button type="button" class="btn btn-block btn-danger btn-xs"><div class="fa  fa-warning"></div> Remove</button></a></td>
+                              <td align="center"><a href="javascript:id('<?php echo $row[0]; ?>')"><button type="button" class="btn btn-block btn-danger btn-xs"><div class="fa  fa-trash-o"></div> Remove</button></a></td>
                              </tr>
                              <?php
                                   }

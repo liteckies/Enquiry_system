@@ -83,7 +83,7 @@
             <!-- /.box-body -->
             <div class="box-footer">
               <div class="pull-right">
-                <button type="submit" class="btn btn-primary"><i class="fa fa-envelope-o"></i> Send</button>
+                <button type="submit" class="btn btn-primary"> Send <i class="fa fa-send-o"></i></button>
               </div>
               <button type="reset" class="btn btn-default"><i class="fa fa-times"></i> Discard</button>
             </div>

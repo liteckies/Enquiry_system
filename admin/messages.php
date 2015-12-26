@@ -43,11 +43,11 @@ function msg_id(id)
     <section class="content-header">
       <h1>
         Dashboard
-        <small>view and respond to messages</small>
+        <small>Manage Enquiries</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Messages</li>
+        <li class="active">Enquiries</li>
       </ol>
     </section>
      <!-- Main content --> 
@@ -55,9 +55,9 @@ function msg_id(id)
         <div class="col-md-11 message-container">
             <div class="nav-tabs-custom">
               <ul class="nav nav-tabs">
-                <li class="active"><a href="#Unread" data-toggle="tab">Pending</a></li>
-                <li><a href="#read" data-toggle="tab">Read</a></li>
-                <li><a href="#all" data-toggle="tab">All</a></li>
+                <li class="active"><a href="#Unread" data-toggle="tab"><div class="fa fa-envelope-o"></div>  Pending</a></li>
+                <li><a href="#read" data-toggle="tab"><div class=" fa fa-folder-open-o"></div> Read</a></li>
+                <li><a href="#all" data-toggle="tab"><div class=" fa fa-lists"></div>  All</a></li>
               </ul>
               <div class="tab-content">
 
@@ -71,7 +71,7 @@ function msg_id(id)
                       <table id="example" class="table table-striped table-bordered display">
                           <thead class="table_header">
                             <tr>
-                              <th>Sender</th>
+                              <th>From</th>
                               <th>Phone</th>
                               <th>Subject</th>
                               <th>Enquiry</th>
@@ -129,7 +129,7 @@ function msg_id(id)
                       <table id="example" class="table table-striped table-bordered display">
                           <thead class="table_header">
                             <tr>
-                              <th>Sender</th>
+                              <th>From</th>
                               <th>Phone</th>
                               <th>Subject</th>
                               <th>Enquiry</th>
@@ -150,7 +150,7 @@ function msg_id(id)
                               <td><?php echo $row[4]; ?></td>
                               <td><?php echo $row[5]; ?></td>
                                <td align="center"><a href="compose.php"><button type="button" class="btn btn-block btn-success btn-xs"> <div class="fa fa-mail-reply"></div> reply</button></a></td>
-                              <td align="center"><a href="javascript:msg_id('<?php echo $row[0]; ?>')"><button type="button" class="btn btn-block btn-warning btn-xs"><div class="fa  fa-warning"></div> Delete</button></a></td>
+                              <td align="center"><a href="javascript:msg_id('<?php echo $row[0]; ?>')"><button type="button" class="btn btn-block btn-warning btn-xs"><div class="fa  fa-trash-o"></div> Delete</button></a></td>
                              </tr>
                              <?php
                                   }
@@ -184,7 +184,7 @@ function msg_id(id)
                       <table id="example" class="table table-striped table-bordered display">
                           <thead class="table_header">
                             <tr>
-                              <th>Sender</th>
+                              <th>From</th>
                               <th>Phone</th>
                               <th>Subject</th>
                               <th>Enquiry</th>
@@ -205,7 +205,7 @@ function msg_id(id)
                               <td><?php echo $row[4]; ?></td>
                               <td><?php echo $row[5]; ?></td>
                                <td align="center"><a href="compose.php"><button type="button" class="btn btn-block btn-success btn-xs"> <div class="fa fa-mail-reply"></div> reply</button></a></td>
-                              <td align="center"><a href="javascript:msg_id('<?php echo $row[0]; ?>')"><button type="button" class="btn btn-block btn-warning btn-xs"><div class="fa  fa-warning"></div> Delete</button></a></td>
+                              <td align="center"><a href="javascript:msg_id('<?php echo $row[0]; ?>')"><button type="button" class="btn btn-block btn-warning btn-xs"><div class="fa fa-trash-o"></div> Delete</button></a></td>
                              </tr>
                              <?php
                                   }

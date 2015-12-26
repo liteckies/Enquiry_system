@@ -37,14 +37,53 @@
                               <td><?php echo $row[1]; ?></td>
                               <td><?php echo $row[2]; ?></td>
                               <td><?php echo $row[3]; ?></td>
-                              <td align="center"><a href="javascript:edit_id('<?php echo $row[0]; ?>')"><button type="button" class="btn btn-block btn-success btn-xs">More info  <div class="fa fa-angle-double-right "></div></button></a></td>
-                             </tr>
+                            </tr>
                              <?php
                                   }
                                 ?>
                         </tbody>
                     </table>
                  </div>
+                 <td> <button class="btn btn-block btn-warning btn-sm" data-toggle="modal" data-target=".bs-example-modal-lg">More info about Courses <div class="fa fa-angle-double-right "></div> </button>
+                    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                  <div class="modal-content">
+                                      <div class="courses_out">
+                                          <div class="courseinfo_table">
+                                              <table id="example" class="table table-striped table-hover display">
+                                                  <thead class="table_header">
+                                                    <tr>
+                                                      <th>Course Name</th>
+                                                      <th>Duration</th>
+                                                      <th>Qualifications</th>
+                                                      <th>Fees (Ksh) </th>
+                                                    </tr>
+                                                  </thead>
+                                                  <tbody>
+                                                    <?php
+                                                        $sql_query="SELECT * FROM courses_info";
+                                                        $result_set=mysql_query($sql_query);
+                                                        while($row=mysql_fetch_row($result_set))
+                                                       {
+                                                          ?>
+                                                       <tr>
+                                                        <td><?php echo $row[1]; ?></td>
+                                                        <td><?php echo $row[2]; ?></td>
+                                                        <td><?php echo $row[3]; ?></td>
+                                                        <td><?php echo $row[4]; ?></td>
+                                                      </tr>
+                                                       <?php
+                                                            }
+                                                          ?>
+                                                  </tbody>
+                                                 
+                                              </table>
+                                         </div>
+                                     </div>
+                                </div>
+                                  </div>
+                      </div>
+                              </td>
                <!-- /.content -->
         </div>
    </div>

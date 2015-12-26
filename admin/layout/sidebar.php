@@ -104,7 +104,7 @@
           </li>
           <!-- Tasks: style can be found in dropdown.less -->
           <li class="dropdown notifications-menu">
-             <a href="others.php" class="enquiries">
+             <a href="admins.php" class="enquiries">
                   <i class="fa fa-user" title="list of Admins"></i>
                   <span class="label label-danger">
                       <?php
@@ -206,6 +206,19 @@
             <li><a href="others.php"><i class="fa fa-mortar-board "></i> All Courses</li>
             <li><a href="addcourse.php"><i class="fa fa-plus-circle"></i>Add course</a></li>
           </ul>
+        </li>
+        <li class="treeview">
+          <a href="">
+            <i class="fa fa-cogs"></i>
+            <span>Qualifications</span>
+            <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="qualifications.php"><i class="fa fa-mortar-board "></i> View qualifications</li>
+            <li><a href="qualification.php"><i class="fa fa-plus-circle"></i>Add qualifications</a></li>
+          </ul>
+        </li>
+        <li>
         </li>
          <li class="treeview">
           <a href="messages.php">

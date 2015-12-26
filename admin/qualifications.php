@@ -4,7 +4,7 @@ include_once 'includes/dbconfig.php';
 // delete condition
 if(isset($_GET['id']))
 {
- $sql_query="DELETE FROM courses WHERE id=".$_GET['id'];
+ $sql_query="DELETE FROM courses_info WHERE course_id=".$_GET['id'];
  mysql_query($sql_query);
  header("Location: $_SERVER[PHP_SELF]");
 }
@@ -13,16 +13,16 @@ if(isset($_GET['id']))
 <script type="text/javascript">
 function edit_id(id)
 {
- if(confirm('Sure to edit ?'))
+ if(confirm('Sure to edit this qualification?'))
  {
-  window.location.href='edit_course.php?edit_id='+id;
+  window.location.href='edit_qualification.php?edit_id='+id;
  }
 }
 function id(id)
 {
- if(confirm('Sure to Delete this course ?'))
+ if(confirm('Sure to Delete this qualification?'))
  {
-  window.location.href='others.php?id='+id;
+  window.location.href='qualifications.php?id='+id;
  }
 }
 </script>
@@ -35,11 +35,11 @@ function id(id)
     <section class="content-header">
       <h1>
         Dashboard
-        <small>Other courses</small>
+        <small>Course Qualifications</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">others</li>
+        <li class="active">qualifications</li>
       </ol>
     </section>
      <!-- Main content --> 
@@ -49,14 +49,15 @@ function id(id)
                         <table id="example" class="table table-striped table-bordered display">
                             <thead class="table_header">
                               <tr>
-                                <th>Name</th>
-                                <th>Department</th>
-                                <th>Category</th>
+                                <th>Course Name</th>
+                                <th>Duration</th>
+                                <th>Qualifications</th>
+                                <th>Fees</th>
                               </tr>
                             </thead>
                             <tbody>
                             <?php
-                              $sql_query="SELECT * FROM courses";
+                              $sql_query="SELECT * FROM courses_info";
                               $result_set=mysql_query($sql_query);
                               while($row=mysql_fetch_row($result_set))
                              {
@@ -65,8 +66,9 @@ function id(id)
                               <td><?php echo $row[1]; ?></td>
                               <td><?php echo $row[2]; ?></td>
                               <td><?php echo $row[3]; ?></td>
+                              <td><?php echo $row[4]; ?></td>
                               <td align="center"><a href="javascript:edit_id('<?php echo $row[0]; ?>')"><button type="button" class="btn btn-block btn-success btn-xs"> <div class="fa fa-edit"></div> Edit</button></a></td>
-                              <td align="center"><a href="javascript:id('<?php echo $row[0]; ?>')"><button type="button" class="btn btn-block btn-danger btn-xs"><div class="fa  fa-trash-o"></div> Delete</button></a></td>
+                              <td align="center"><a href="javascript:id('<?php echo $row[0]; ?>')"><button type="button" class="btn btn-block btn-danger btn-xs"><div class="fa  fa-warning"></div> Delete</button></a></td>
                              </tr>
                              <?php
                                   }
